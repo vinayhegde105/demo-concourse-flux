@@ -53,6 +53,9 @@ spec:
   - host: demo-concourse-flux.particule.io
     http:
       paths:
-      - backend:
+      - path: /
+        pathType: Prefix
+        - backend:
           serviceName: helloworld-svc
-          servicePort: 80
+            port:
+              number: 80
